@@ -5,7 +5,6 @@ export default class TrainingForm extends LightningElement {
     @track currentStep;
     type = '';
    // feedbackFlag = 'Yes';
-
     handleSave() {
         console.log('success');
         this.dispatchEvent(
@@ -67,7 +66,7 @@ export default class TrainingForm extends LightningElement {
                 //   console.log('in online');
                 this.template.querySelector('lightning-input-field.online')
                     .classList.add('slds-hide');
-                this.template.querySelector('lightning-input-field.onlinea')
+                this.template.querySelector('lightning-input-field.online_a')
                     .classList.add('slds-hide');
             }
             else if (this.type == 'Telephonic') {
@@ -103,7 +102,7 @@ export default class TrainingForm extends LightningElement {
             //   console.log('in online');
             this.template.querySelector('lightning-input-field.online')
                 .classList.remove('slds-hide');
-            this.template.querySelector('lightning-input-field.onlinea')
+            this.template.querySelector('lightning-input-field.online_a')
                 .classList.remove('slds-hide');
         }
         else if (this.type === 'Telephonic') {
@@ -139,7 +138,7 @@ export default class TrainingForm extends LightningElement {
                 //   console.log('in online');
                 this.template.querySelector('lightning-input-field.online')
                     .classList.remove('slds-hide');
-                this.template.querySelector('lightning-input-field.onlinea')
+                this.template.querySelector('lightning-input-field.online_a')
                     .classList.remove('slds-hide');
             }
             else if (this.type == 'Telephonic') {
@@ -174,7 +173,7 @@ export default class TrainingForm extends LightningElement {
                 .classList.remove('slds-hide');
         }
         else if (this.feedbackFlag == 'Yes') {
-            console.log('setp value '+this.currentStep);
+
             //this.currentStep = '3';
             this.template.querySelector('div.stepTwo').classList.add('slds-hide');
             this.template
